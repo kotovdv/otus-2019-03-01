@@ -1,0 +1,8 @@
+dist: trusty
+sudo: required
+language: cpp
+compiler: clang
+script:
+  - cmake .
+  - cmake --build .
+  - cmake --build . --target package
