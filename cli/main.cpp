@@ -1,6 +1,6 @@
 #include <iostream>
-#include "version/app_version.h"
 #include <string>
+#include "../lib/app_version.h"
 
 int main() {
     std::cout << "build " << patchVersion() << std::endl;
