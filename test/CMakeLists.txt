@@ -1,6 +1,6 @@
-project(hello_wolrd_test)
+project(hellowolrd_test)
 
-add_library(hello_world_test_lib ../lib/app_version.cpp)
+add_library(helloworld_test_lib ../lib/app_version.cpp)
 add_executable(version_test test.cpp)
 
 add_definitions(-DPROJECT_VERSION_MAJOR="9")
@@ -19,7 +19,7 @@ set_target_properties(version_test
         INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
         )
 
-target_link_libraries(version_test hello_world_test_lib)
+target_link_libraries(version_test helloworld_test_lib)
 target_link_libraries(version_test ${Boost_LIBRARIES})
 
 enable_testing()
