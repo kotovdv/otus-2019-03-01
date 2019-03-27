@@ -9,17 +9,17 @@ add_definitions(-DPROJECT_VERSION_MINOR="${PROJECT_VERSION_MINOR}")
 add_definitions(-DPROJECT_VERSION_PATCH="${PROJECT_VERSION_PATCH}")
 
 add_library(hello_world_cli_lib ../lib/app_version.cpp)
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(helloworld main.cpp)
 
-set_target_properties(${PROJECT_NAME} PROPERTIES
+set_target_properties(helloworld PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
         COMPILE_OPTIONS "-Wpedantic;-Wall;-Wextra"
         )
 
-target_link_libraries(${PROJECT_NAME} hello_world_cli_lib)
+target_link_libraries(helloworld hello_world_cli_lib)
 
-install(TARGETS hello_world_cli RUNTIME DESTINATION bin RENAME helloworld)
+install(TARGETS helloworld RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
