@@ -1,4 +1,4 @@
-project(hello_wolrd_cli)
+project(hello_world_cli)
 
 set(PROJECT_VERSION_MAJOR 0)
 set(PROJECT_VERSION_MINOR 0)
@@ -19,7 +19,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 
 target_link_libraries(${PROJECT_NAME} hello_world_cli_lib)
 
-install(TARGETS hello_wolrd_cli RUNTIME DESTINATION bin)
+install(TARGETS hello_world_cli RUNTIME DESTINATION bin RENAME helloworld)
 
 set(CPACK_GENERATOR DEB)
 
