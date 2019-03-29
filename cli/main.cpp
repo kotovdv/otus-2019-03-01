@@ -4,7 +4,7 @@
 
 int main() {
     std::cout << "build " << patchVersion() << std::endl;
-    std::cout << "Hello, World!";
+    std::cout << "Hello, World!" << std::endl;
 
     return 0;
 }
